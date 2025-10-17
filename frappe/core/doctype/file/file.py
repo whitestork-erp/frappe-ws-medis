@@ -19,6 +19,7 @@ from frappe.model.document import Document
 from frappe.permissions import SYSTEM_USER_ROLE, get_doctypes_with_read
 from frappe.utils import call_hook_method, cint, get_files_path, get_hook_method, get_url
 from frappe.utils.file_manager import is_safe_path
+from frappe.utils.html_utils import escape_html
 from frappe.utils.image import optimize_image, strip_exif_data
 from frappe.utils.pdf import pdf_contains_js
 
@@ -31,7 +32,7 @@ from .exceptions import (
 from .utils import *
 
 exclude_from_linked_with = True
-ImageFile.LOAD_TRUNCATED_IMAGES = True
+ImageFile.LOAD_TRUNCATED_IMAGES = True  # nosemgrep
 URL_PREFIXES = ("http://", "https://", "/api/method/")
 
 
@@ -131,7 +132,6 @@ class File(Document):
 		self.validate_file_url()
 		self.validate_file_on_disk()
 		self.file_size = frappe.form_dict.file_size or self.file_size
-		self.check_content()
 
 	def validate_attachment_references(self):
 		if not self.attached_to_doctype:
@@ -688,7 +688,7 @@ class File(Document):
 			)
 
 		if duplicate_file:
-			file_doc: "File" = frappe.get_cached_doc("File", duplicate_file.name)
+			file_doc: File = frappe.get_cached_doc("File", duplicate_file.name)
 			if file_doc.exists_on_disk():
 				if self.exists_on_disk():
 					if not self.file_url:
@@ -760,7 +760,7 @@ class File(Document):
 	def create_attachment_record(self):
 		icon = ' <i class="fa fa-lock text-warning"></i>' if self.is_private else ""
 		file_url = quote(frappe.safe_encode(self.file_url), safe="/:") if self.file_url else self.file_name
-		file_name = self.file_name or self.file_url
+		file_name = escape_html(self.file_name or self.file_url)
 
 		self.add_comment_in_reference_doc(
 			"Attachment",
