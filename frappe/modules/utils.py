@@ -5,6 +5,12 @@
 """
 import json
 import os
+<<<<<<< HEAD
+=======
+from pathlib import Path
+from textwrap import dedent, indent
+from typing import TYPE_CHECKING, Union
+>>>>>>> 31131ea129 (fix(get_doc_path): don't allow referencing a path outside the doc's module (#34581))
 
 import frappe
 import frappe.utils
@@ -201,9 +207,19 @@ def scrub_dt_dn(dt, dn):
 	return scrub(dt), scrub(dn)
 
 
+<<<<<<< HEAD
 def get_module_path(module):
 	"""Returns path of the given module"""
 	return frappe.get_module_path(module)
+=======
+def get_doc_path(module: str, doctype: str, name: str) -> str:
+	"""Return path of a doc in a module."""
+	module_path = Path(get_module_path(module))
+	path = module_path / Path(*scrub_dt_dn(doctype, name))
+	if not path.resolve().is_relative_to(module_path.resolve()):
+		raise ValueError(_("Path {0} is not within module {1}").format(path, module))
+	return path.resolve()
+>>>>>>> 31131ea129 (fix(get_doc_path): don't allow referencing a path outside the doc's module (#34581))
 
 
 def get_doc_path(module, doctype, name):
