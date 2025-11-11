@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2025-11-09 09:33+0000\n"
-"PO-Revision-Date: 2025-11-10 10:49\n"
+"PO-Revision-Date: 2025-11-11 11:10\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -27112,7 +27112,7 @@ msgstr "Za"
 #: frappe/public/js/frappe/views/communication.js:53
 msgctxt "Email Recipients"
 msgid "To"
-msgstr "Do"
+msgstr "Za"
 
 #. Label of the to_date (Date) field in DocType 'Dashboard Chart'
 #: frappe/desk/doctype/dashboard_chart/dashboard_chart.json
