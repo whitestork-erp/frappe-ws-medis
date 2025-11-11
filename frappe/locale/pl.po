@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2025-11-09 09:33+0000\n"
-"PO-Revision-Date: 2025-11-10 10:48\n"
+"PO-Revision-Date: 2025-11-11 11:09\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -8066,7 +8066,7 @@ msgstr ""
 
 #: frappe/desk/page/setup_wizard/install_fixtures.py:46
 msgid "Dr"
-msgstr "Wn"
+msgstr ""
 
 #: frappe/public/js/frappe/model/indicator.js:73
 #: frappe/public/js/frappe/ui/filters/filter.js:538
@@ -15511,7 +15511,7 @@ msgstr ""
 
 #: frappe/desk/page/setup_wizard/install_fixtures.py:50
 msgid "Master"
-msgstr "Мistrz"
+msgstr ""
 
 #. Description of the 'Limit' (Int) field in DocType 'Bulk Update'
 #: frappe/desk/doctype/bulk_update/bulk_update.json
