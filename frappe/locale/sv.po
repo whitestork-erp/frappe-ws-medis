@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2025-11-09 09:33+0000\n"
-"PO-Revision-Date: 2025-11-10 10:48\n"
+"PO-Revision-Date: 2025-11-11 11:10\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -2836,7 +2836,7 @@ msgstr "Bifoga Dokument Utskrift"
 #. Label of the attach_files (Select) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "Attach Files"
-msgstr ""
+msgstr "Bifoga Filer"
 
 #. Option for the 'Type' (Select) field in DocType 'DocField'
 #. Option for the 'Field Type' (Select) field in DocType 'Custom Field'
@@ -2923,7 +2923,7 @@ msgstr "Bilaga Borttagen"
 #. Label of the column_break_25 (Section Break) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "Attachment Settings"
-msgstr ""
+msgstr "Bilaga Inställningar"
 
 #. Label of the attachments (Code) field in DocType 'Email Queue'
 #: frappe/email/doctype/email_queue/email_queue.json
@@ -11087,7 +11087,7 @@ msgstr "Från"
 #. Label of the from_attach_field (Select) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "From Attach Field"
-msgstr ""
+msgstr "Från Bifoga Fält"
 
 #. Label of the from_date (Date) field in DocType 'Dashboard Chart'
 #: frappe/desk/doctype/dashboard_chart/dashboard_chart.json
@@ -11107,7 +11107,7 @@ msgstr "Från DocType"
 #. Option for the 'Attach Files' (Select) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "From Field"
-msgstr ""
+msgstr "Från Fält"
 
 #. Label of the sender_full_name (Data) field in DocType 'Communication'
 #: frappe/core/doctype/communication/communication.json
@@ -17931,11 +17931,11 @@ msgstr "OTP Utgivarens Namn"
 #. Settings'
 #: frappe/core/doctype/system_settings/system_settings.json
 msgid "OTP SMS Template"
-msgstr ""
+msgstr "OTP SMS Mall"
 
 #: frappe/core/doctype/system_settings/system_settings.py:167
 msgid "OTP SMS Template must contain <code>{0}</code> placeholder to insert the OTP."
-msgstr ""
+msgstr "OTP SMS Mall måste innehålla <code>{0}</code> platshållare för att infoga OTP."
 
 #: frappe/twofactor.py:459
 msgid "OTP Secret Reset - {0}"
@@ -17949,7 +17949,7 @@ msgstr "OTP Hemlighet är återställd. Registrering erfordras vid nästa inlogg
 #. Settings'
 #: frappe/core/doctype/system_settings/system_settings.json
 msgid "OTP placeholder should be defined as <code>{{ otp }}</code> "
-msgstr ""
+msgstr "OTP platshållare ska definieras som <code>{{ otp }}</code> "
 
 #: frappe/templates/includes/login/login.js:355
 msgid "OTP setup using OTP App was not completed. Please contact Administrator."
@@ -19020,7 +19020,7 @@ msgstr "Sökväg till Privat Nyckel Fil"
 
 #: frappe/modules/utils.py:207
 msgid "Path {0} is not within module {1}"
-msgstr ""
+msgstr "Sökväg {0} är inte inom modul {1}"
 
 #: frappe/website/path_resolver.py:230
 msgid "Path {0} it not a valid path"
@@ -19556,7 +19556,7 @@ msgstr "Spara dokument före radering av tilldelning"
 
 #: frappe/automation/doctype/auto_repeat/auto_repeat.js:89
 msgid "Please save the form before previewing the message"
-msgstr ""
+msgstr "Spara formulär innan förhandsgranskning av meddelande"
 
 #: frappe/public/js/frappe/views/reports/report_view.js:1733
 msgid "Please save the report first"
@@ -19686,7 +19686,7 @@ msgstr "Ange minst 10 minuter på grund av utlösande stegfrekvens av schemaläg
 
 #: frappe/email/doctype/notification/notification.py:172
 msgid "Please specify the field from which to attach files"
-msgstr ""
+msgstr "Ange fält från vilket filer ska bifogas"
 
 #: frappe/email/doctype/notification/notification.py:162
 msgid "Please specify the minutes offset"
