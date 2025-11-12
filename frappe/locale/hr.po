@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2025-11-09 09:33+0000\n"
-"PO-Revision-Date: 2025-11-11 11:10\n"
+"PO-Revision-Date: 2025-11-12 11:17\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Croatian\n"
 "MIME-Version: 1.0\n"
@@ -2838,7 +2838,7 @@ msgstr "Priloži Ispis Dokumenta"
 #. Label of the attach_files (Select) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "Attach Files"
-msgstr ""
+msgstr "Priloži Datoteke"
 
 #. Option for the 'Type' (Select) field in DocType 'DocField'
 #. Option for the 'Field Type' (Select) field in DocType 'Custom Field'
@@ -2925,7 +2925,7 @@ msgstr "Prilog Uklonjen"
 #. Label of the column_break_25 (Section Break) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "Attachment Settings"
-msgstr ""
+msgstr "Postavke Priloga"
 
 #. Label of the attachments (Code) field in DocType 'Email Queue'
 #: frappe/email/doctype/email_queue/email_queue.json
@@ -11089,7 +11089,7 @@ msgstr "Od"
 #. Label of the from_attach_field (Select) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "From Attach Field"
-msgstr ""
+msgstr "Iz Polja Priloga"
 
 #. Label of the from_date (Date) field in DocType 'Dashboard Chart'
 #: frappe/desk/doctype/dashboard_chart/dashboard_chart.json
@@ -11109,7 +11109,7 @@ msgstr "Od Dokumenta"
 #. Option for the 'Attach Files' (Select) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "From Field"
-msgstr ""
+msgstr "Iz Polja"
 
 #. Label of the sender_full_name (Data) field in DocType 'Communication'
 #: frappe/core/doctype/communication/communication.json
@@ -17933,11 +17933,11 @@ msgstr "Naziv OTP Izdavaoca"
 #. Settings'
 #: frappe/core/doctype/system_settings/system_settings.json
 msgid "OTP SMS Template"
-msgstr ""
+msgstr "OTP SMS Predložak"
 
 #: frappe/core/doctype/system_settings/system_settings.py:167
 msgid "OTP SMS Template must contain <code>{0}</code> placeholder to insert the OTP."
-msgstr ""
+msgstr "OTP SMS Predložak mora sadržavati <code>{0}</code> rezervirano mjesto za umetanje OTP-a."
 
 #: frappe/twofactor.py:459
 msgid "OTP Secret Reset - {0}"
@@ -17951,7 +17951,7 @@ msgstr "OTP Tajna je resetovana. Ponovna registracija će biti potrebna prilikom
 #. Settings'
 #: frappe/core/doctype/system_settings/system_settings.json
 msgid "OTP placeholder should be defined as <code>{{ otp }}</code> "
-msgstr ""
+msgstr "OTP Rezervirano mjesto treba biti definirano kao <code>{{ otp }}</code> "
 
 #: frappe/templates/includes/login/login.js:355
 msgid "OTP setup using OTP App was not completed. Please contact Administrator."
@@ -19022,7 +19022,7 @@ msgstr "Put do Datoteke Privatnog Ključa"
 
 #: frappe/modules/utils.py:207
 msgid "Path {0} is not within module {1}"
-msgstr ""
+msgstr "Put {0} nije unutar modula {1}"
 
 #: frappe/website/path_resolver.py:230
 msgid "Path {0} it not a valid path"
@@ -19558,7 +19558,7 @@ msgstr "Spremi dokument prije uklanjanja dodjele"
 
 #: frappe/automation/doctype/auto_repeat/auto_repeat.js:89
 msgid "Please save the form before previewing the message"
-msgstr ""
+msgstr "Sačuvaj obrazac prije pregleda poruke"
 
 #: frappe/public/js/frappe/views/reports/report_view.js:1733
 msgid "Please save the report first"
@@ -19688,7 +19688,7 @@ msgstr "Navedi najmanje 10 minuta zbog ritma okidača raspoređivača"
 
 #: frappe/email/doctype/notification/notification.py:172
 msgid "Please specify the field from which to attach files"
-msgstr ""
+msgstr "Navedi polje iz kojeg želite priložiti datoteke"
 
 #: frappe/email/doctype/notification/notification.py:162
 msgid "Please specify the minutes offset"
