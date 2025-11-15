@@ -173,7 +173,7 @@ class MariaDBDatabase(MariaDBConnectionUtil, MariaDBExceptionUtil, Database):
 	def setup_type_map(self):
 		self.db_type = "mariadb"
 		self.type_map = {
-			"Currency": ("decimal", "25,9"),
+			"Currency": ("decimal", "23,9"),
 			"Int": ("int", "11"),
 			"Long Int": ("bigint", "20"),
 			"Float": ("decimal", "21,9"),
