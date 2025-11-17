@@ -176,7 +176,7 @@ class MariaDBDatabase(MariaDBConnectionUtil, MariaDBExceptionUtil, Database):
 			"Currency": ("decimal", "23,9"),
 			"Int": ("int", "11"),
 			"Long Int": ("bigint", "20"),
-			"Float": ("decimal", "21,9"),
+			"Float": ("decimal", "23,9"),
 			"Percent": ("decimal", "21,9"),
 			"Check": ("int", "1"),
 			"Small Text": ("text", ""),
