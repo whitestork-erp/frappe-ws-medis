@@ -101,6 +101,11 @@ frappe.call = function (opts) {
 		delete args.cmd;
 	}
 
+	// Add unique request ID to URL
+	const request_id = frappe.utils.get_random(16);
+	const separator = url.includes('?') ? '&' : '?';
+	url = `${url}${separator}request_id=${request_id}`;
+
 	// debouce if required
 	if (opts.debounce && frappe.request.is_fresh(args, opts.debounce)) {
 		return Promise.resolve();
