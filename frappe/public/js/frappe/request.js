@@ -101,10 +101,8 @@ frappe.call = function (opts) {
 		delete args.cmd;
 	}
 
-	// Add unique request ID to URL
+	// Generate unique request ID
 	const request_id = frappe.utils.get_random(16);
-	const separator = url.includes('?') ? '&' : '?';
-	url = `${url}${separator}request_id=${request_id}`;
 
 	// debouce if required
 	if (opts.debounce && frappe.request.is_fresh(args, opts.debounce)) {
@@ -120,7 +118,7 @@ frappe.call = function (opts) {
 		btn: opts.btn,
 		freeze: opts.freeze,
 		freeze_message: opts.freeze_message,
-		headers: opts.headers || {},
+		headers: Object.assign({ "X-Frappe-Request-Id": request_id }, opts.headers || {}),
 		error_handlers: opts.error_handlers || {},
 		// show_spinner: !opts.no_spinner,
 		async: opts.async,
