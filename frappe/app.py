@@ -428,6 +428,7 @@ if sentry_dsn := os.getenv("FRAPPE_SENTRY_DSN"):
 	from sentry_sdk.integrations.excepthook import ExcepthookIntegration
 	from sentry_sdk.integrations.modules import ModulesIntegration
 	from sentry_sdk.integrations.wsgi import SentryWsgiMiddleware
+	from sentry_sdk.integrations.logging import LoggingIntegration
 
 	from frappe.utils.sentry import FrappeIntegration, before_send
 
@@ -437,6 +438,7 @@ if sentry_dsn := os.getenv("FRAPPE_SENTRY_DSN"):
 		DedupeIntegration(),
 		ModulesIntegration(),
 		ArgvIntegration(),
+		LoggingIntegration()
 	]
 
 	experiments = {}
