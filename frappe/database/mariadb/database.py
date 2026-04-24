@@ -126,6 +126,7 @@ class MariaDBConnectionUtil:
 			"charset": "utf8mb4",
 			"collation": "utf8mb4_unicode_ci",
 			"use_unicode": True,
+			"local_infile": False,
 		}
 
 		if self.cur_db_name:

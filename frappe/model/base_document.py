@@ -948,6 +948,9 @@ class BaseDocument:
 
 				frappe.utils.validate_url(data, throw=True)
 
+			if data_field_options == "IBAN" and data:
+				frappe.utils.validate_iban(data, throw=True)
+
 	def _validate_constants(self):
 		if frappe.flags.in_import or self.is_new() or self.flags.ignore_validate_constants:
 			return
@@ -1049,7 +1052,7 @@ class BaseDocument:
 			df = self.meta.get_field(key)
 			db_value = db_values.get(key)
 
-			if df and not df.allow_on_submit and (self.get(key) or db_value):
+			if df and not df.allow_on_submit and not df.is_virtual and (self.get(key) or db_value):
 				if df.fieldtype in table_fields:
 					# just check if the table size has changed
 					# individual fields will be checked in the loop for children
