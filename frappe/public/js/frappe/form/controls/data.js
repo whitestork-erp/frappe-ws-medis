@@ -1,3 +1,4 @@
+
 frappe.provide("frappe.phone_call");
 
 frappe.ui.form.ControlData = class ControlData extends frappe.ui.form.ControlInput {
@@ -7,10 +8,11 @@ frappe.ui.form.ControlData = class ControlData extends frappe.ui.form.ControlInp
 	make_input() {
 		if (this.$input) return;
 
-		let { html_element, input_type } = this.constructor;
+		let { html_element, input_type, input_mode } = this.constructor;
 
 		this.$input = $("<" + html_element + ">")
 			.attr("type", input_type)
+			.attr("inputmode", input_mode)
 			.attr("autocomplete", "off")
 			.addClass("input-with-feedback form-control")
 			.prependTo(this.input_area);
@@ -72,6 +74,9 @@ frappe.ui.form.ControlData = class ControlData extends frappe.ui.form.ControlInp
 		if (this.df.options == "Barcode") {
 			this.setup_barcode_field();
 		}
+		if (this.df.options == "IBAN") {
+			this.setup_iban_field();
+		}
 	}
 
 	setup_url_field() {
@@ -114,6 +119,12 @@ frappe.ui.form.ControlData = class ControlData extends frappe.ui.form.ControlInp
 			setTimeout(() => {
 				this.$link.toggle(false);
 			}, 500);
+		});
+	}
+
+	setup_iban_field() {
+		this.$input.on("blur", () => {
+			this.set_formatted_input(this.get_input_value());
 		});
 	}
 
@@ -231,7 +242,7 @@ frappe.ui.form.ControlData = class ControlData extends frappe.ui.form.ControlInp
 		this.$input
 			.attr("data-fieldtype", this.df.fieldtype)
 			.attr("data-fieldname", this.df.fieldname)
-			.attr("placeholder", this.df.placeholder || "");
+			.attr("placeholder", __(this.df.placeholder || ""));
 		if (this.doctype) {
 			this.$input.attr("data-doctype", this.doctype);
 		}
@@ -256,7 +267,16 @@ frappe.ui.form.ControlData = class ControlData extends frappe.ui.form.ControlInp
 		return this.$input ? this.$input.val() : undefined;
 	}
 	format_for_input(val) {
+		if (this.df.options == "IBAN" && val) {
+			return frappe.utils.get_formatted_iban(val);
+		}
 		return val == null ? "" : val;
+	}
+	parse(value) {
+		if (this.df.options == "IBAN" && value) {
+			return value.replaceAll(" ", "");
+		}
+		return value;
 	}
 	validate(v) {
 		if (!v) {
